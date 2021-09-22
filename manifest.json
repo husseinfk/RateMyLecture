@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Rate my lecture",
+    "version": "1.0.0",
+    "description": "Ratings collector for pre-recorder lecture videos",
+    "icons": { "128": "icon_128.png" },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup" : "index.html"
+    },
+    "content_scripts" : [
+        {
+            "js":["content.js"],
+            "matches": ["http://*/*", "https://*/*"],
+            "all_frames": true
+        }
+
+    ],
+
+    "permissions" : ["activeTab"]
+
+}
